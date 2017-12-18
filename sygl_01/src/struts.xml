@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+    
+    <struts>
+    	<constant name="struts.action.extension" value="active"></constant>
+    	<constant name="struts.configuration.xml.reload" value="true"></constant>
+    	<constant name="struts.custom.i18n.resources" value="message"></constant>
+   		<package name="yjd" extends="json-default" namespace="/">
+			<!-- 供应商信息 -->
+			<action name="saveGys" class="com.gys.action.GysAction" method="saveGys"></action>   			
+			<action name="findGys" class="com.gys.action.GysAction" method="findGysByGysbh">
+				<result name="findGysByGysbh" type="json"></result>
+			</action>
+			<action name="updateGys" class="com.gys.action.GysAction" method="updateGys"></action>   			
+			<action name="deleteGys" class="com.gys.action.GysAction" method="deleteGys"></action>   			
+   			
+   			<!-- 商品信息 -->
+   			<action name="spShow" class="sp.action.SpAction" method="spShow">
+   				<result name="spShow" type="json"></result>
+   			</action>
+   			
+   			<action name="saveSp" class="sp.action.SpAction" method="saveSp"></action> 
+   			<action name="deleteSp" class="sp.action.SpAction" method="deleteSp"></action> 
+   			
+   			<action name="findSp" class="sp.action.SpAction" method="findSpBySpbh">
+   				<result name="fingSp" type="json"></result>
+   			</action> 
+   			<action name="updateSp" class="sp.action.SpAction" method="updateSp"></action> 
+   			
+   			<!-- 库房信息 -->
+   			<action name="kfShow" class="kf.action.KfAction" method="kfShow">
+   				<result name="findAll" type="json"></result>
+   			</action> 
+   			
+   			<action name="saveKf" class="kf.action.KfAction" method="saveKf"></action> 
+   			
+   			<action name="findKf" class="kf.action.KfAction" method="findKfByKfbh">
+   				<result name="findKfByKfbh" type="json" ></result>
+   			</action> 
+   			
+   			<action name="updateKf" class="kf.action.KfAction" method="updateKf"></action> 
+   			
+   			
+   			<action name="deleteKf" class="kf.action.KfAction" method="deleteKf"></action> 
+   		</package>
+    
+    
+    
+    </struts>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+		<!DOCTYPE mapper
+		 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		<mapper namespace="kf">
+		
+			<select id="findAll" resultType="kf">
+			select * from
+			(select t1.*,rownum rn from 
+			(select * from t_kf order by kfbh desc) t1
+			where rownum &lt;=#{end}) t2
+			where t2.rn &gt;=#{start}
+			</select>
+			
+			<select id="findCount" resultType="java.lang.Integer">
+				select count(*) from t_kf
+			</select>
+			
+			<insert id="saveKf">
+				insert into t_kf values(#{kfbh},#{kfmc},#{kfdz})
+			</insert>
+			
+			<select id="findKfByKfbh" resultType="kf">
+				select * from t_kf where kfbh=#{kfbh}
+			</select>
+			
+			<update id="updateKf">
+				update t_kf set kfmc=#{kfmc},kfdz=#{kfdz} where kfbh=#{kfbh}
+			</update>
+			
+			<delete id="deleteKf">
+				delete from t_kf where kfbh=#{kfbh}
+			</delete>
+			
+		</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlrewrite>
+<rule>
+	<!-- userSave.html  userDelete.html -->
+	<from>^/go_([A-Za-z0-9]+)_1.html$</from>
+	<to>/gys/$1.jsp</to>
+</rule>
+<rule>
+	<!-- userSave.html  userDelete.html -->
+	<from>^/go_([A-Za-z0-9]+)_1.html?(.+)$</from>
+	<to>/gys/$1.jsp</to>
+</rule>
+<rule>
+	<!-- userSave.html  userDelete.html -->
+	<from>^/go_([A-Za-z0-9]+)_2.html$</from>
+	<to>/$1.active</to>
+</rule>
+</urlrewrite>
+		

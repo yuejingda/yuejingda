@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+		<!DOCTYPE mapper
+		 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		<mapper namespace="sp">
+			<select id="findSpBySpbh" resultType="sp">
+				select * from t_sp where spbh = #{spbh}
+			</select>
+			<update id="updateSp" >
+				update t_sp set pmgg=#{pmgg},zjm=#{zjm},xh=#{xh},dw=#{dw},sb=#{sb},cd=#{cd},kcsx=#{kcsx},kcxx=#{kcxx},lsj=#{lsj},pfj1=#{pfj1},pfj2=#{pfj2},pfj3=#{pfj3} where spbh=#{spbh}
+								<!--  yl1=null,yl2=null,yl3=null,yl4=null,yl5=0-->
+			</update>
+			
+			<delete id="deleteSp">
+				delete from t_sp where spbh=#{spbh}			
+			</delete>
+			
+		</mapper>

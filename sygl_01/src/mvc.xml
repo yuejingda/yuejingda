@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<mvc>
+	<constant name="reload" value="true"></constant>
+	<!-- =======================权限管理============================================== -->
+	<action name="login" class="com.action.UserAction" method="checkLogin">
+		<result name="main">main.jsp</result>
+		<result name="disabled" type="redirect">disabled.jsp</result>
+		<result name="login" type="redirect">login.jsp</result>
+	</action>
+	
+	<action name="userShow" class="com.action.UserAction" method="userShow">
+		<result name="userShow">userShow.jsp</result>
+	</action>
+	
+	<action name="userSave" class="com.action.UserAction" method="userSave">
+		<result name="userSave" type="redirect">userShow.do</result>
+	</action>
+	
+	<action name="userEdit" class="com.action.UserAction" method="userEdit">
+		<result name="userEdit">userUpdate.jsp</result>
+	</action>
+	
+	<action name="userUpdate" class="com.action.UserAction" method="userUpdate">
+		<result name="userUpdate" type="redirect">userShow.do</result>
+	</action>
+	
+	<action name="userDelete" class="com.action.UserAction" method="userDelete">
+		<result name="userDelete" type="redirect">userShow.do</result>
+	</action>
+	
+	<action name="userBatchDelete" class="com.action.UserAction" method="userBatchDelete">
+		<result name="userBatchDelete" type="redirect">userShow.do</result>
+	</action>
+	
+	<action name="roleShow" class="com.action.RoleAction" method="roleShow">
+		<result name="roleShow" >roleShow.jsp</result>
+	</action>
+	
+	<action name="roleSave" class="com.action.RoleAction" method="roleSave">
+		<result name="roleSave" type="redirect">roleShow.do</result>
+	</action>
+	
+	<action name="roleEdit" class="com.action.RoleAction" method="roleEdit">
+		<result name="roleEdit" >roleUpdate.jsp</result>
+	</action>
+	
+	<action name="roleUpdate" class="com.action.RoleAction" method="roleUpdate">
+		<result name="roleUpdate" type="redirect">roleShow.do</result>
+	</action>
+	
+	<action name="roleDelete" class="com.action.RoleAction" method="roleDelete">
+		<result name="roleDelete" type="redirect">roleShow.do</result>
+	</action>
+	
+	<action name="roleBatchDelete" class="com.action.RoleAction" method="roleBatchDelete">
+		<result name="roleBatchDelete" type="redirect">roleShow.do</result>
+	</action>
+	
+	 
+	<action name="userUpload" class="com.action.UserAction" method="userUpload">
+		<result name="userUpload" type="redirect">userShow.do</result>
+	</action>
+	
+	<action name="userExport" class="com.action.UserExportAction" method="userExport">
+		<result name="userExport" type="redirect">userShow.do</result>
+		<result name="fail" type="redirect">userShow.do</result>
+	</action>
+	
+	<action name="menuShow" class="com.action.MenuShowAction" method="menuShow">
+	</action>
+	
+	<action name="setRole" class="com.action.RoleAction" method="setRole">
+	</action>
+	 
+	 <action name="setUserRole" class="com.action.RoleAction" method="setUserRole">
+	</action>
+	
+	<action name="toSetRoles" class="com.action.RoleAction" method="toSetRoles">
+	</action>
+	
+	<action name="saveMenu" class="com.action.MenuShowAction" method="saveMenu">
+	</action>
+	
+	<action name="setMenus" class="com.action.MenuShowAction" method="setMenus">
+	</action>
+	
+	<action name="findMenu" class="com.action.MenuShowAction" method="findMenuByMno">
+	</action>
+	
+	<action name="updateMenu" class="com.action.MenuShowAction" method="updateMenu">
+	</action>
+	
+	<action name="deleteMenu" class="com.action.MenuShowAction" method="deleteMenu">
+	</action>
+	
+	
+	
+	<action name="saveRoleMenus" class="com.action.MenuShowAction" method="saveRoleMenus">
+	</action>
+	
+	<action name="loginMenus" class="com.action.MenuShowAction" method="loginMenus">
+	</action>
+	
+	<action name="logout" class="com.action.LogoutAction" method="logout">
+		<result name="logout" type="redirect">login.jsp</result>
+	</action>
+	
+	<action name="updatePass" class="com.action.UpdatePassAction" method="updatePass">
+	</action>
+	
+	<action name="obtainUpass" class="com.action.UpdatePassAction" method="obtainUpass">
+	</action>
+	
+	<!-- ==========================供应商管理================================== -->
+	<action name="gysShow" class="com.gys.action.GysAction" method="gysShow">
+	</action>
+</mvc>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

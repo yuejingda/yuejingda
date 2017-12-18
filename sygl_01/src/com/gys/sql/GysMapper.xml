@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+		<!DOCTYPE mapper
+		 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		<mapper namespace="gys">
+			<select id="findGysByGysbh" resultType="gys">
+				select * from t_gys where gysbh=#{gysbh}
+			</select>
+			
+			<update id="updateGys">
+				update t_gys set gysmc=#{gysmc},lxr=#{lxr},lxdh=#{lxdh},frdb=#{frdb},gsdz=#{gsdz},yb=#{yb},cz=#{cz},sjhm=#{sjhm},yhzh=#{yhzh},sh=#{sh},khyh=#{khyh},bzxx=#{bzxx} where gysbh=#{gysbh}
+			</update>
+			
+			<delete id="deleteGys">
+				delete from t_gys where gysbh=#{gysbh}
+			</delete>
+		</mapper>
